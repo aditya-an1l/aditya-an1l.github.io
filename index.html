@@ -1,144 +1,255 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aditya Anil - GitHub Page</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <img
-          src="https://avatars.githubusercontent.com/u/140952269"
-          alt="Aditya Anil Logo"
-          width="100"
-          height="100"
-        />
-      </div>
-      <h1>Welcome, People and Robots of the Internet!</h1>
-    </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Anil - Developer Profile</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for custom colors and font -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#1e293b', // slate-800
+                        'secondary-dark': '#334155', // slate-700
+                        'accent': '#3b82f6', // blue-500
+                        'text-light': '#f1f5f9', // slate-100
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        /* Custom list style for the 'About Me' section */
+        .custom-list li::before {
+            content: "•";
+            color: #3b82f6; /* Accent color */
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
 
-    <main>
-      <section id="about">
-        <h2>About Me</h2>
-        <p>
-          I am an avid learner and researcher. I use GitHub to harness my
-          programming and research skills and contribute to important projects.
-        </p>
-        <p>
-          I read research papers, blogs, news articles, and non-fiction books.
-          In my free (and not-so-free) time, I write on blogs, magazines,
-          forums, and platforms where my voice can be shared.
-        </p>
-        <p>
-          Programming is my hobby. I build projects for fun using Python, Lua,
-          C/C++, and Javascript. For research, I work with R, LaTeX, and MATLAB.
-        </p>
-        <p>
-          I believe in the power of open-source projects that foster
-          collaboration. Open Source and Collaboration catalyze advancements.
-        </p>
-        <p>
-          Constantly learning and striving to improve, I compete with myself to
-          become better at my craft.
-        </p>
-        <p>
-          <strong>Contact me:</strong>
-          <a href="mailto:aditya.anil.productions@gmail.com"
-            >aditya.anil.productions@gmail.com</a
-          >
-        </p>
-      </section>
+        /* Styling for the table in Software Skills */
+        .skills-table th, .skills-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #475569; /* slate-600 */
+        }
+        .skills-table th {
+            font-weight: 600;
+            color: #94a3b8; /* slate-400 */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-text-light font-sans p-4 md:p-8">
 
-      <section id="skills">
-        <h2>Technical Skills</h2>
-        <p>
-          My interests evolve constantly, and I experiment with various
-          technologies. Here's an overview of my current skills:
-        </p>
-        <ul>
-          <li><b>Frontend:</b> HTML5, CSS3, React</li>
-          <li><b>Backend:</b> Python, Lua, NodeJS</li>
-          <li><b>Database:</b> MySQL</li>
-          <li><b>Unix:</b> Debian, Ubuntu</li>
-          <li><b>Research:</b> R, MATLAB, LaTeX, Markdown</li>
-          <li><b>CLI:</b> Bash, Shell Scripts</li>
-        </ul>
-      </section>
+    <div class="max-w-4xl mx-auto bg-primary-dark shadow-2xl rounded-xl p-6 md:p-10 border border-slate-700">
 
-      <section id="software">
-        <h2>Software Skills</h2>
-        <p>Here's a list of tools I frequently use:</p>
-        <table>
-          <thead>
-            <tr>
-              <th>Category</th>
-              <th>Tools</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Programming</td>
-              <td>NeoVim, VSCode, Sublime, Jupyter, Quarto</td>
-            </tr>
-            <tr>
-              <td>Media Editing</td>
-              <td>Adobe Suite (Photoshop, Illustrator, Premiere), Inkscape</td>
-            </tr>
-            <tr>
-              <td>3D/CAD</td>
-              <td>Blender, Solidwork</td>
-            </tr>
-            <tr>
-              <td>Game Development</td>
-              <td>GoDot</td>
-            </tr>
-            <tr>
-              <td>Notetaking</td>
-              <td>Obsidian, LaTeX, MSOffice, Google Workspace</td>
-            </tr>
-            <tr>
-              <td>Virtual Machines</td>
-              <td>VMWare Workstation Pro</td>
-            </tr>
-            <tr>
-              <td>Research</td>
-              <td>Zotero, LaTeX, R Studio, MATLAB, Jupyter</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>
-          I adapt my workflow based on needs. For example, I prefer NeoVim for
-          coding but use VSCode for collaboration. This flexibility keeps my
-          workflow dynamic.
-        </p>
-      </section>
+        <!-- Header Section -->
+        <header class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Hello People and Robots of the Internet</h1>
+            
+            <div class="flex justify-center mb-6">
+                <!-- Profile Image -->
+                <img 
+                    src="https://avatars.githubusercontent.com/u/140952269" 
+                    alt="Aditya's GitHub Avatar" 
+                    width="100" 
+                    height="100" 
+                    class="rounded-full ring-4 ring-accent shadow-lg transition-transform hover:scale-105"
+                >
+            </div>
 
-      <section id="closing">
-        <h2>Closing Thoughts</h2>
-        <p>
-          All tools and skills mentioned aid my research and development
-          efforts. My goal remains constant: to contribute meaningfully and
-          leave a positive legacy.
-        </p>
-        <blockquote>
-          <strong>
-            I aspire to be the light of the world, leaving a bright, positive
-            impact behind as my legacy.
-          </strong>
-        </blockquote>
-      </section>
-    </main>
+            <p class="text-xl font-semibold mb-2">I'm <span class="text-accent">Aditya</span>. This is my GitHub Page.</p>
+            <p class="text-lg text-slate-300 mb-6">I use GitHub to showcase my projects and contribute to open-source.</p>
 
-    <footer>
-      <p>� 2024 Aditya Anil</p>
-    </footer>
+            <p class="text-lg font-medium mb-8">I'm passionate about 
+                <span class="font-bold text-yellow-400">Artificial Intelligence</span>, 
+                <span class="font-bold text-green-400">Science</span>, and 
+                <span class="font-bold text-red-400">Technology</span> in general.
+            </p>
 
-    <script src="script.js"></script>
-  </body>
+            <h2 class="text-xl text-slate-400 font-light italic">Read ahead to know me (almost) better</h2>
+        </header>
+
+        <!-- Main Content Sections -->
+        <main class="space-y-12">
+            
+            <!-- About Me Section -->
+            <section class="bg-secondary-dark p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold mb-4 border-b pb-2 border-slate-600 text-accent">About Me</h2>
+                
+                <ul class="space-y-4 text-slate-300 custom-list">
+                    <li>
+                        <span class="font-bold text-white">⚛️ Avid Learner.</span>
+                        <p class="ml-4">I use GitHub to harness my programming and research skills, and use it to contribute to important projects.</p>
+                    </li>
+                    <li>
+                        <span class="font-bold text-white">📖✍️ Read a lot. Write a lot.</span>
+                        <ul class="ml-4 list-disc list-inside">
+                            <li>I read research papers, blogs, news articles and non-fiction books.</li>
+                            <li>In my free (and in my not-so-free time), I write on blogs, magazines, forums, and all platforms where my voice can be shared and flourish.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="font-bold text-white">💻 Programming as a Hobby, and building projects for fun</span>
+                        <ul class="ml-4 list-disc list-inside">
+                            <li>My primary programming languages include <span class="font-semibold text-sky-400">Python</span>, <span class="font-semibold text-sky-400">Lua</span>, <span class="font-semibold text-sky-400">C/C++</span> and <span class="font-semibold text-sky-400">Javascript</span>.</li>
+                            <li>For research, I work with <span class="font-semibold text-sky-400">R</span>, <span class="font-semibold text-sky-400">LaTEX</span> and <span class="font-semibold text-sky-400">MATLAB</span>.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="font-bold text-white">💡 Believes in the power of open-source projects that induce collaboration and community-driven initiatives.</span>
+                        <p class="ml-4">I believe that Open Source and collaborative projects catalyses the rate of advancements.</p>
+                    </li>
+                    <li>
+                        <span class="font-bold text-white">🌱 Constantly learning and striving to improve.</span>
+                        <p class="ml-4">I am competing with myself to become better at my crafts.</p>
+                    </li>
+                    <li>
+                        <span class="font-bold text-white">🤝 Reach out</span> for any queries/feedback/communication
+                        <p class="ml-4">Email: <a href="mailto:aditya.anil.productions@gmail.com" class="text-accent hover:underline">aditya.anil.productions@gmail.com</a></p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Technical Skills Section -->
+            <section class="bg-secondary-dark p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold mb-4 border-b pb-2 border-slate-600 text-accent">Technical Skills</h2>
+                
+                <!-- Badges -->
+                <div class="flex flex-wrap justify-center gap-3 mb-6">
+                    <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python Badge">
+                    <img src="https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white" alt="Lua Badge">
+                    <img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white" alt="C Badge">
+                    <img src="https://img.shields.io/badge/C++-Solutions.svg?style=for-the-badge&logo=c&logoColor=white" alt="C++ Badge">
+                    <img src="https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white" alt="R Badge">
+                    <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="Javascript Badge">
+                    <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js Badge">
+                    <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React Badge">
+                    <img src="https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Shell Script Badge">
+                    <img src="https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white" alt="Markdown Badge">
+                    <img src="https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white" alt="LaTeX Badge">
+                    <img src="https://img.shields.io/badge/Debian-D70A53?style=for-the-badge&logo=debian&logoColor=white" alt="Debian Badge">
+                    <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="Ubuntu Badge">
+                    <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 Badge">
+                    <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3 Badge">
+                    <img src="https://img.shields.io/badge/mysql-%2300000f.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL Badge">
+                </div>
+
+                <p class="text-slate-300 mb-4">My interest changes and evolves with time. I experiment a lot with languages and tech stack, so expect this section to get updated every now and then.</p>
+
+                <p class="font-semibold text-white mb-2">Here are the technical skills which I currently possess:</p>
+                <ul class="ml-4 list-disc list-inside space-y-1 text-slate-300">
+                    <li><span class="font-medium text-sky-300">Frontend</span>: HTML5 / CSS3, React</li>
+                    <li><span class="font-medium text-sky-300">Backend</span>: Python, Lua, NodeJS</li>
+                    <li><span class="font-medium text-sky-300">Database</span>: MySQL, MongoDB</li>
+                    <li><span class="font-medium text-sky-300">Unix</span>: Arch Linux, Debian and Ubuntu</li>
+                    <li><span class="font-medium text-sky-300">Research</span>: R, Matlab, LaTEX, Markdown</li>
+                    <li><span class="font-medium text-sky-300">CLI</span>: Bash / Shell Scripts</li>
+                    <li><span class="font-medium text-sky-300">Core Programming</span>: Python, Java, C, Assembly</li>
+                </ul>
+                <p class="text-slate-300 mt-4">The Tech and Open Source Community buzzes all the time with innovations, news, surprises, drama and (at times) remarkable advancements. I just get my hands dirty and play a lot.</p>
+            </section>
+
+            <!-- Software Skills Section -->
+            <section class="bg-secondary-dark p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold mb-4 border-b pb-2 border-slate-600 text-accent">Software Skills</h2>
+                
+                <!-- Badges -->
+                <div class="flex flex-wrap justify-center gap-3 mb-6">
+                    <img src="https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white" alt="NeoVim Badge">
+                    <img src="https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter Badge">
+                    <img src="https://img.shields.io/badge/adobe-%23FF0000.svg?style=for-the-badge&logo=adobe&logoColor=white" alt="Adobe Badge">
+                    <img src="https://img.shields.io/badge/Inkscape-e0e0e0?style=for-the-badge&logo=inkscape&logoColor=080A13" alt="Inkscape Badge">
+                    <img src="https://img.shields.io/badge/blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white" alt="Blender Badge">
+                    <img src="https://img.shields.io/badge/GODOT-%23FFFFFF.svg?style=for-the-badge&logo=godot-engine" alt="Godot Badge">
+                    <img src="https://img.shields.io/badge/Obsidian-%23483699.svg?style=for-the-badge&logo=obsidian&logoColor=white" alt="Obsidian Badge">
+                    <img src="https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white" alt="LaTeX Badge">
+                    <img src="https://img.shields.io/badge/Microsoft_Office-D83B01?style=for-the-badge&logo=microsoft-office&logoColor=white" alt="MS Office Badge">
+                    <img src="https://img.shields.io/badge/google-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Google Badge">
+                </div>
+
+                <p class="text-slate-300 mb-6">As mentioned before, I experiment a lot. I have listed the software — both Open Source and Closed — that I use every now and then:</p>
+
+                <!-- Table for Software Skills -->
+                <div class="overflow-x-auto rounded-lg border border-slate-600">
+                    <table class="w-full skills-table">
+                        <thead class="bg-slate-700">
+                            <tr>
+                                <th>Purpose</th>
+                                <th>Tools</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-700">
+                            <tr>
+                                <td>Programming</td>
+                                <td>NeoVim, VSCode, Sublime, Jupyter, Quarto</td>
+                            </tr>
+                            <tr>
+                                <td>Media Editing</td>
+                                <td>Adobe Tools (Photoshop, Illustrator, Premiere Pro, etc.), Inkscape</td>
+                            </tr>
+                            <tr>
+                                <td>3d and CAD</td>
+                                <td>Blender, Solidwork</td>
+                            </tr>
+                            <tr>
+                                <td>Game Dev</td>
+                                <td>GoDot</td>
+                            </tr>
+                            <tr>
+                                <td>Notetaking</td>
+                                <td>Obsidian, LaTeX, MSOffice, Google Workspace Tools</td>
+                            </tr>
+                            <tr>
+                                <td>Virtual Machine</td>
+                                <td>VMWare Workstation Pro</td>
+                            </tr>
+                            <tr>
+                                <td>Research</td>
+                                <td>Zotero, LaTeX, R Studio, Jupyter, Matlab</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="text-slate-300 mt-6">This is not a complete list, obviously, for I am quite fuzzy about working with many tools. I usually use these tools in conjunction.</p>
+                <p class="text-slate-300 mt-2">All the tools and skills mentioned here play a great role in my research, learning and programming endeavours.</p>
+            </section>
+
+            <!-- Closing Thoughts -->
+            <section class="p-6 rounded-lg text-center bg-slate-700 shadow-xl">
+                <h2 class="text-2xl font-bold mb-4 text-white">Closing Thoughts</h2>
+                <p class="text-lg text-slate-200 font-serif italic">
+                    In the end, my goal is simple:
+                    <br>
+                    <span class="text-xl font-extrabold text-yellow-300 block mt-2">I aspire to be the light of the world, and leave a bright positive impact behind as my legacy.</span>
+                </p>
+            </section>
+
+        </main>
+
+        <!-- Footer / Acknowledgements -->
+        <footer class="mt-10 pt-6 border-t border-slate-700 text-center text-sm text-slate-500">
+            <h3 class="font-semibold text-slate-400 mb-2">Acknowledgements</h3>
+            <p>
+                Badge Markdown code is taken from the list at 
+                <a href="https://github.com/Ileriayo/markdown-badges" target="_blank" class="text-accent hover:underline">Ileriayo/markdown-badges</a>, generated via 
+                <a href="https://badges.ritza.co/" target="_blank" class="text-accent hover:underline">GitHub badge generator (ritza.co)</a>. 
+                Do check out and support the authors.
+            </p>
+        </footer>
+
+    </div>
+
+</body>
 </html>
