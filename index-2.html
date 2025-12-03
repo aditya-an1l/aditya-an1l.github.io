@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aditya Anil — Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="description"
+    content="Aditya Anil — programmer, technical writer, and researcher. AI, systems, and Arch Linux enthusiast.">
+</head>
+
+<body>
+
+  <!-- AI particle canvas (programmatic background) -->
+  <canvas id="aiCanvas" aria-hidden></canvas>
+  <div class="bg-scanlines" aria-hidden></div>
+  <div class="floating-3d" aria-hidden>
+    <div class="cube c1"></div>
+    <div class="cube c2"></div>
+    <div class="cube c3"></div>
+  </div>
+
+  <header class="site-header card interactive-card glass">
+    <div class="inner">
+      <div>
+        <h1 class="site-title">Aditya Anil</h1>
+        <p class="byline small muted">Researcher · Programmer · Arch Linux enthusiast</p>
+      </div>
+
+      <div class="header-right">
+        <div class="typewrap monospace" aria-hidden>
+          <span id="typewriter" class="typewriter"></span>
+          <span class="caret">▌</span>
+        </div>
+
+        <div class="orbit" aria-hidden>
+          <div class="atom core"></div>
+          <div class="orbiting o1"></div>
+          <div class="orbiting o2"></div>
+          <div class="orbiting o3"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar card interactive-card glass">
+      <img class="avatar" src="assets/images/my-avatar.png" alt="Aditya Anil avatar">
+      <h2 class="small-name">Aditya Anil</h2>
+      <p class="byline muted">Researcher · Technical writer · Arch Linux tinkerer</p>
+
+      <div class="neofetch monospace card-compact glass">
+        <div class="arch-badge">ARCH</div>
+        <div>Aditya@machine</div>
+        <div><strong>OS:</strong> Arch Linux</div>
+        <div><strong>Kernel:</strong> 6.x</div>
+        <div><strong>Shell:</strong> zsh</div>
+        <div><strong>Editor:</strong> Neovim</div>
+        <div class="dotfiles"><a href="#">~/dotfiles</a></div>
+      </div>
+
+      <div class="contacts">
+        <a href="mailto:aditya.anil.productions@gmail.com">aditya.anil.productions@gmail.com</a>
+        <a href="tel:+919958735408">+91 99587 35408</a>
+        <address>Amaravati, Andhra Pradesh, India</address>
+      </div>
+
+      <div class="social">
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+        <a href="#">Blog</a>
+      </div>
+    </aside>
+
+    <!-- CONTENT COLUMN -->
+    <div class="content-col">
+
+      <!-- ABOUT (single card) -->
+      <section id="about" class="panel card interactive-card glass">
+        <h2>About me</h2>
+        <div class="panel-body about-text">
+          <p>Hi, I’m Aditya Anil — a programmer, writer, and lifelong learner with a passion for AI, technology, and
+            science.</p>
+
+          <p>My story started at the age of 16 with Chegg, which launched my journey into technical writing. For over
+            five years, I’ve written for outlets like <strong>Towards AI</strong>, <strong>Decoder</strong>,
+            <strong>DataDrivenInvestor</strong>, and <strong>AI in Plain English</strong> — breaking down complex ideas
+            in AI and computer science into clear, engaging articles.
+          </p>
+
+          <p>While writing, I drifted toward programming — the more I explained systems, the more I wanted to build
+            them. From HTML experiments to full-stack projects, this curiosity pulled me into open source and the inner
+            workings of software.</p>
+
+          <p>Now, I write and build: long-form essays, research prototypes, and small tools that make research easier to
+            reproduce.</p>
+        </div>
+
+        <div class="panel-body service">
+          <h3>What I do</h3>
+          <ul class="service-list">
+            <li class="service-item card-compact glass">
+              <div class="service-content-box">
+                <h4 class="service-item-title">Technical Writing</h4>
+                <p class="service-item-text">Long-form essays and explainers about machine learning, systems, and AI
+                  policy.</p>
+              </div>
+            </li>
+
+            <li class="service-item card-compact glass">
+              <div class="service-content-box">
+                <h4 class="service-item-title">Research & Prototyping</h4>
+                <p class="service-item-text">Reproducible experiments and tooling (notebooks, datasets, small
+                  prototypes).</p>
+              </div>
+            </li>
+
+            <li class="service-item card-compact glass">
+              <div class="service-content-box">
+                <h4 class="service-item-title">Web & Tooling</h4>
+                <p class="service-item-text">Small, well-engineered tools: CLI helpers, utilities, and web demos.</p>
+              </div>
+            </li>
+
+            <li class="service-item card-compact glass">
+              <div class="service-content-box">
+                <h4 class="service-item-title">Consulting & Writing</h4>
+                <p class="service-item-text">Advising on technical communication, experiment design, and
+                  reproducibility.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS (separate card section) -->
+      <section id="testimonials" class="panel card glass testimonials-section">
+        <h2>Testimonials</h2>
+        <div class="panel-body testimonials-grid">
+          <!-- Each testimonial is a small card with avatar, name, and quote -->
+          <article class="testimonial-card card-compact glass">
+            <figure class="testimonials-avatar-box">
+              <img src="assets/images/avatar-1.png" alt="Nitin Saraswat" width="72">
+            </figure>
+            <div class="testimonial-body">
+              <h4 class="testimonial-name">Nitin Saraswat</h4>
+              <p class="testimonial-role">CEO, AiProff.ai</p>
+              <blockquote class="testimonial-text">Aditya was a star performer and made outstanding contributions to the
+                organisation in October 2023.</blockquote>
+            </div>
+          </article>
+
+          <article class="testimonial-card card-compact glass">
+            <figure class="testimonials-avatar-box">
+              <img src="assets/images/avatar-2.png" alt="Adarsh Dabral" width="72">
+            </figure>
+            <div class="testimonial-body">
+              <h4 class="testimonial-name">Adarsh Dabral</h4>
+              <p class="testimonial-role">Colleague</p>
+              <blockquote class="testimonial-text">Throughout his tenure, Aditya demonstrated strong passion for web
+                design and contributed immensely to our project.</blockquote>
+            </div>
+          </article>
+
+          <!-- Add more testimonial-card elements as needed -->
+        </div>
+      </section>
+
+      <!-- CLIENTS & PUBLICATIONS (separate horizontally scrollable card) -->
+      <section id="clients" class="panel card glass clients-section">
+        <h2>Clients & Publications</h2>
+        <div class="panel-body clients-scroll-wrap">
+          <div class="clients-scroll" id="clientsScroll" tabindex="0"
+            aria-label="Clients logos horizontally scrollable">
+            <!-- these items should be various sizes (logos) -->
+            <div class="client-item card-compact glass"><img src="media/images/towards-ai-logo.png" alt="Towards AI">
+            </div>
+            <div class="client-item card-compact glass"><img src="media/images/ddi-logo.png" alt="DataDrivenInvestor">
+            </div>
+            <div class="client-item card-compact glass"><img src="media/images/ai-pe-logo.png"
+                alt="AI in Plain English"></div>
+            <div class="client-item card-compact glass"><img src="media/images/swiss-cognitive-logo.png"
+                alt="Swiss Cognitive"></div>
+            <div class="client-item card-compact glass"><img src="media/images/the-decoder-logo.png" alt="The Decoder">
+            </div>
+            <div class="client-item card-compact glass"><img src="media/images/ai-proff-logo.png" alt="AiProff"></div>
+            <!-- duplicates / placeholders for looping effect -->
+            <div class="client-item card-compact glass"><img src="media/images/towards-ai-logo.png" alt="Towards AI">
+            </div>
+            <div class="client-item card-compact glass"><img src="media/images/ddi-logo.png" alt="DataDrivenInvestor">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE (own section) -->
+      <section id="experience" class="panel card interactive-card glass">
+        <h2>Experience</h2>
+        <div class="panel-body timeline">
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="timeline-item-title">Technical Writer — Substack</h4>
+              <span>Dec 2022 — Present</span>
+              <p class="timeline-text">Writing about AI, tech and research on my personal Substack and Medium.</p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="timeline-item-title">Open Source Contributor — GitHub</h4>
+              <span>Jul 2023 — Present</span>
+              <p class="timeline-text">Contribute to projects in Python, C/C++, MATLAB, Lua, and JavaScript.</p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="timeline-item-title">Senior Technical Writer — AiProff AI</h4>
+              <span>Sep 2023 — Jan 2024</span>
+              <p class="timeline-text">Covered technical AI topics and industry trends for a specialist audience.</p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="timeline-item-title">Creative Writer — thisDay (Ekank Technologies)</h4>
+              <span>Apr 2023 — Sep 2023</span>
+              <p class="timeline-text">Wrote accessible technical and creative pieces for a general audience.</p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="timeline-item-title">Frontend Web Developer — Young Protons International Council</h4>
+              <span>Apr 2023 — Jun 2023</span>
+              <p class="timeline-text">Built front-end features and improved UX for internal tools.</p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="timeline-item-title">Graphic Designer Student — DQ Labs</h4>
+              <span>Feb 2022 — Feb 2023</span>
+              <p class="timeline-text">Studied design tools and participated in design hackathons.</p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="timeline-item-title">Associate Content Writer — Chegg Inc.</h4>
+              <span>Jun 2021 — Aug 2021</span>
+              <p class="timeline-text">Wrote educational content on college selection and related topics.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- EDUCATION (own section) -->
+      <section id="education" class="panel card interactive-card glass">
+        <h2>Education</h2>
+        <div class="panel-body timeline">
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="timeline-item-title">Amrita Vishwa Vidyapeetham — BTech (Computer Science & AI)</h4>
+              <span>Graduating 2028</span>
+              <p class="timeline-text">Specializing in AI and systems.</p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="timeline-item-title">Army Public School, Bangalore</h4>
+              <span>2020 — 2022</span>
+              <p class="timeline-text">Senior high schooling.</p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="timeline-item-title">Army Public School, New Delhi</h4>
+              <span>2015 — 2007</span>
+              <p class="timeline-text">Junior high schooling.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- SKILLS (own section) -->
+      <section id="skills" class="panel card interactive-card glass">
+        <h2>Skills</h2>
+        <div class="panel-body skill">
+          <ul class="skills-list content-card glass">
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Software Development</h5><data value="80">80%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width:80%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Technical Writing</h5><data value="90">90%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width:90%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Web Development</h5><data value="60">60%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width:60%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Machine Learning</h5><data value="40">40%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width:40%;"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- PROJECTS / PORTFOLIO (own section) -->
+      <section id="projects" class="panel card glass">
+        <h2>Projects</h2>
+        <div class="panel-body projects">
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-icon">▾</div>
+            </button>
+            <ul class="select-list">
+              <li class="select-item"><button data-select-item>All</button></li>
+              <li class="select-item"><button data-select-item>Web design</button></li>
+              <li class="select-item"><button data-select-item>Applications</button></li>
+              <li class="select-item"><button data-select-item>Web development</button></li>
+            </ul>
+          </div>
+
+          <ul class="project-list">
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="#">
+                <figure class="project-img glass"><img src="assets/images/project-1.jpg" alt="Finance" loading="lazy">
+                </figure>
+                <h3 class="project-title">Finance</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="#">
+                <figure class="project-img glass"><img src="assets/images/project-2.png" alt="Orizon" loading="lazy">
+                </figure>
+                <h3 class="project-title">Orizon</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="web design">
+              <a href="#">
+                <figure class="project-img glass"><img src="assets/images/project-3.jpg" alt="Fundo" loading="lazy">
+                </figure>
+                <h3 class="project-title">Fundo</h3>
+                <p class="project-category">Web design</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="applications">
+              <a href="#">
+                <figure class="project-img glass"><img src="assets/images/project-4.png" alt="Brawlhalla"
+                    loading="lazy"></figure>
+                <h3 class="project-title">Brawlhalla</h3>
+                <p class="project-category">Applications</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="#">
+                <figure class="project-img glass"><img src="assets/images/project-7.png" alt="Summary" loading="lazy">
+                </figure>
+                <h3 class="project-title">Summary</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="applications">
+              <a href="#">
+                <figure class="project-img glass"><img src="assets/images/project-8.jpg" alt="Task Manager"
+                    loading="lazy"></figure>
+                <h3 class="project-title">Task Manager</h3>
+                <p class="project-category">Applications</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="#">
+                <figure class="project-img glass"><img src="assets/images/project-9.png" alt="Arrival" loading="lazy">
+                </figure>
+                <h3 class="project-title">Arrival</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- BLOG (kept as horizontal scroll) -->
+      <section id="blog" class="panel card">
+        <h2>Blog</h2>
+        <div class="panel-body">
+          <div class="posts-controls">
+            <div class="genres">
+              <button class="genre-btn active" data-genre="all">All</button>
+              <button class="genre-btn" data-genre="ai">AI</button>
+              <button class="genre-btn" data-genre="linux">Linux</button>
+              <button class="genre-btn" data-genre="systems">Systems</button>
+            </div>
+
+            <div class="sort">
+              <label for="sortSelect" class="visually-hidden">Sort posts</label>
+              <select id="sortSelect">
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="title-asc">Title A → Z</option>
+                <option value="title-desc">Title Z → A</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="posts-scroll" id="postsScroll" tabindex="0">
+            <article class="post-card interactive-card card-compact glass" data-genre="ai" data-date="2025-09-01">
+              <h4><a href="#">Classical vs quantum uncertainty</a></h4>
+              <time datetime="2025-09-01">Sep 1, 2025</time>
+              <p class="excerpt">Explains differences between classical and quantum uncertainty with examples.</p>
+            </article>
+
+            <article class="post-card interactive-card card-compact glass" data-genre="linux" data-date="2025-09-01">
+              <h4><a href="#">Download pacman packages with unstable internet</a></h4>
+              <time datetime="2025-09-01">Sep 1, 2025</time>
+              <p class="excerpt">Tips and a robust script for fetching pacman and AUR packages on flaky connections.</p>
+            </article>
+
+            <article class="post-card interactive-card card-compact glass" data-genre="systems" data-date="2025-08-15">
+              <h4><a href="#">Designing minimal tooling for reproducible experiments</a></h4>
+              <time datetime="2025-08-15">Aug 15, 2025</time>
+              <p class="excerpt">How small design decisions improve reproducibility and researcher productivity.</p>
+            </article>
+
+            <article class="post-card interactive-card card-compact glass" data-genre="ai" data-date="2025-07-20">
+              <h4><a href="#">On model evaluation and broken benchmarks</a></h4>
+              <time datetime="2025-07-20">Jul 20, 2025</time>
+              <p class="excerpt">A critical look at popular ML benchmarks and what they really measure.</p>
+            </article>
+
+            <!-- archive -->
+            <article class="post-card interactive-card card-compact glass" data-genre="design" data-date="2022-02-23">
+              <h4><a href="#">Design conferences in 2022</a></h4>
+              <time datetime="2022-02-23">Feb 23, 2022</time>
+              <p class="excerpt">Conference notes and takeaways from design events in 2022.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="panel card interactive-card glass">
+        <h2>Contact</h2>
+        <div class="panel-body">
+          <p>If you want to work together or have a question, email <a
+              href="mailto:aditya.anil.productions@gmail.com">aditya.anil.productions@gmail.com</a>.</p>
+
+          <div class="mapbox">
+            <figure>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+                loading="lazy"></iframe>
+            </figure>
+          </div>
+
+          <div class="contact-form">
+            <h3 class="form-title">Contact Form</h3>
+            <form action="#" class="form" data-form>
+              <div class="input-wrapper">
+                <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+                <input type="email" name="email" class="form-input" placeholder="Email address" required
+                  data-form-input>
+              </div>
+              <textarea name="message" class="form-input" placeholder="Your Message" required
+                data-form-input></textarea>
+              <button class="form-btn" type="submit" data-form-btn><span>Send Message</span></button>
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Bottom nav (glass) -->
+  <nav class="bottom-nav card glass" aria-label="Site navigation">
+    <ul class="nav-list">
+      <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+      <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+      <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+      <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
+      <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <footer class="site-footer card glass">
+    <div class="inner">
+      <p class="copyright">© <span id="year"></span> Aditya Anil.</p>
+      <p class="foot-links"><a href="#">Publications</a> · <a href="#">RSS</a></p>
+    </div>
+  </footer>
+
+  <!-- script references (I'll provide the JS next) -->
+  <script src="assets/js/script.js"></script>
+
+  <!-- ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
